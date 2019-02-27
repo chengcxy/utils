@@ -38,7 +38,7 @@ class AsyncCheckApi(object):
                 async with session.get(url) as resp:
                     response = await resp.json()
         except Exception as e:
-            print('url:{} 请求异常'.format(url,e))
+            print('url:{} 请求异常{}'.format(url,e))
         finally:
             return response
 
