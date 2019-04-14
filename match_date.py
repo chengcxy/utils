@@ -3,7 +3,7 @@ import time
 
 class Matchdate(object):
     """
-    Match = Match_db_date()
+    Match = Matchdate()
     import json
     print json.dumps(Match.to_match('2014-01-11','2014-08-22'))
     """
@@ -84,63 +84,7 @@ class Matchdate(object):
             dc[self.fit_date_format(_start_year,_start_month)][0] = start
             dc[self.fit_date_format(_end_year, _end_month)][-1] = end
         return dc
-import random
-WORDS = (
-    'exercitationem', 'perferendis', 'perspiciatis', 'laborum', 'eveniet',
-    'sunt', 'iure', 'nam', 'nobis', 'eum', 'cum', 'officiis', 'excepturi',
-    'odio', 'consectetur', 'quasi', 'aut', 'quisquam', 'vel', 'eligendi',
-    'itaque', 'non', 'odit', 'tempore', 'quaerat', 'dignissimos',
-    'facilis', 'neque', 'nihil', 'expedita', 'vitae', 'vero', 'ipsum',
-    'nisi', 'animi', 'cumque', 'pariatur', 'velit', 'modi', 'natus',
-    'iusto', 'eaque', 'sequi', 'illo', 'sed', 'ex', 'et', 'voluptatibus',
-    'tempora', 'veritatis', 'ratione', 'assumenda', 'incidunt', 'nostrum',
-    'placeat', 'aliquid', 'fuga', 'provident', 'praesentium', 'rem',
-    'necessitatibus', 'suscipit', 'adipisci', 'quidem', 'possimus',
-    'voluptas', 'debitis', 'sint', 'accusantium', 'unde', 'sapiente',
-    'voluptate', 'qui', 'aspernatur', 'laudantium', 'soluta', 'amet',
-    'quo', 'aliquam', 'saepe', 'culpa', 'libero', 'ipsa', 'dicta',
-    'reiciendis', 'nesciunt', 'doloribus', 'autem', 'impedit', 'minima',
-    'maiores', 'repudiandae', 'ipsam', 'obcaecati', 'ullam', 'enim',
-    'totam', 'delectus', 'ducimus', 'quis', 'voluptates', 'dolores',
-    'molestiae', 'harum', 'dolorem', 'quia', 'voluptatem', 'molestias',
-    'magni', 'distinctio', 'omnis', 'illum', 'dolorum', 'voluptatum', 'ea',
-    'quas', 'quam', 'corporis', 'quae', 'blanditiis', 'atque', 'deserunt',
-    'laboriosam', 'earum', 'consequuntur', 'hic', 'cupiditate',
-    'quibusdam', 'accusamus', 'ut', 'rerum', 'error', 'minus', 'eius',
-    'ab', 'ad', 'nemo', 'fugit', 'officia', 'at', 'in', 'id', 'quos',
-    'reprehenderit', 'numquam', 'iste', 'fugiat', 'sit', 'inventore',
-    'beatae', 'repellendus', 'magnam', 'recusandae', 'quod', 'explicabo',
-    'doloremque', 'aperiam', 'consequatur', 'asperiores', 'commodi',
-    'optio', 'dolor', 'labore', 'temporibus', 'repellat', 'veniam',
-    'architecto', 'est', 'esse', 'mollitia', 'nulla', 'a', 'similique',
-    'eos', 'alias', 'dolore', 'tenetur', 'deleniti', 'porro', 'facere',
-    'maxime', 'corrupti',
-)
 
-COMMON_WORDS = (
-    'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur',
-    'adipisicing', 'elit', 'sed', 'do', 'eiusmod', 'tempor', 'incididunt',
-    'ut', 'labore', 'et', 'dolore', 'magna', 'aliqua',
-)
-
-def words(count, common=True):
-    """
-    Return a string of `count` lorem ipsum words separated by a single space.
-
-    If `common` is True, then the first 19 words will be the standard
-    'lorem ipsum' words. Otherwise, all words will be selected randomly.
-    """
-    word_list = list(COMMON_WORDS) if common else []
-    c = len(word_list)
-    if count > c:
-        count -= c
-        while count > 0:
-            c = min(count, len(WORDS))
-            count -= c
-            word_list += random.sample(WORDS, c)
-    else:
-        word_list = word_list[:count]
-    return ' '.join(word_list)
 
 
 if __name__ == '__main__':
