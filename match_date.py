@@ -5,7 +5,7 @@ class Matchdate(object):
     """
     Match = Matchdate()
     import json
-    print json.dumps(Match.to_match('2014-01-11','2014-08-22'))
+    print(json.dumps(Match.to_match('2014-01-11','2014-08-22'))）
     """
 
     def __init__(self, db_prefix=None):
@@ -94,4 +94,3 @@ if __name__ == '__main__':
     dc = match.to_match('2013-04-11', '2017-04-11')
     for k,v in dc.items():
         print(k,v)
-  
