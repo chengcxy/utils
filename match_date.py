@@ -94,5 +94,4 @@ if __name__ == '__main__':
     dc = match.to_match('2013-04-11', '2017-04-11')
     for k,v in dc.items():
         print(k,v)
-    g = words(10,common=True)
-    print(g)
+  
